@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountInfo"
+    android:background="@color/colorAccent"
+    android:padding="20dp">
+
+    <ImageView
+        style="@style/Text"
+        android:id="@+id/appLogo"
+        android:src="@mipmap/logo_white"
+        android:layout_height="90dp"
+        android:layout_width="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        style="@style/Text"
+        android:id="@+id/loginToContinue"
+        android:text="Complete regusteration please"
+        android:layout_below="@id/appLogo"
+        />
+
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/nameInfo"
+        android:hint=" Display name :"
+        android:layout_below="@id/loginToContinue"
+        android:inputType="text"
+        />
+
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/ageInfo"
+        android:hint=" Age "
+        android:layout_below="@id/nameInfo"
+        android:inputType="number"
+        android:maxLength="3"
+        />
+
+    <LinearLayout
+        android:id="@+id/genderGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ageInfo"
+        android:paddingTop="18dp"
+        android:paddingBottom="20dp">
+        <TextView
+            style="@style/Text"
+            android:id="@+id/genderTV"
+            android:text="Gender  : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:paddingTop="1dp"
+            android:textColor="#fafafa"
+            />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                style="@style/Text"
+                android:buttonTint="#fafafa"
+                android:id="@+id/maleRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                style="@style/Text"
+                android:buttonTint="#fafafa"
+                android:id="@+id/femaleRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/Register"
+        android:text="Continue"
+        android:textColor="#fafafa"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/genderGroup"
+        />
+
+
+
+
+</RelativeLayout>

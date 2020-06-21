@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@color/colorAccent"
+    android:padding="20dp">
+
+    <ImageView
+        style="@style/Text"
+        android:id="@+id/appLogo"
+        android:src="@mipmap/logo_white"
+        android:layout_height="90dp"
+        android:layout_width="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/verificationContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/appLogo">
+    <TextView
+        style="@style/Text"
+        android:id="@+id/verifyTV"
+        android:text="Verification code is just sent to rout email \n please enter the code : "
+
+        />
+
+
+    <EditText
+        android:id="@+id/verifyET"
+        style="@style/EditText"
+        android:layout_below="@id/verifyTV"
+        android:hint=" Enter code :"
+        android:inputType="textPassword" />
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/verifyBTN"
+        android:text="verify"
+        android:textColor="#fafafa"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/verifyET"
+        />
+
+
+    <TextView
+        style="@style/Text"
+        android:id="@+id/errorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verifyBTN"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

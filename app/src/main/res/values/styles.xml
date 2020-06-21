@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar" >
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="EditText">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="backgroundTint">#fafafa</item>
+        <item name="android:textColorHint">#CEC1C1</item>
+        <item name="android:textColor">#fafafa</item>
+        <item name="android:textCursorDrawable">@drawable/cursorcolor</item>
+    </style>
+
+    <style name="Button">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">#e53935</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:textColorHint">#fafafa</item>
+    </style>
+
+
+    <style name="Text">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#fafafa</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+</resources>
