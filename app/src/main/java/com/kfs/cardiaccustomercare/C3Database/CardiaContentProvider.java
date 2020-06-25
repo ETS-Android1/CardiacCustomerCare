@@ -137,7 +137,7 @@ public class CardiaContentProvider extends ContentProvider {
 
         // Notify the resolver if the uri has been changed, and return the newly inserted URI
         getContext().getContentResolver().notifyChange(uri, null);
-
+        Log.e("from provider","giii"+getContext().getContentResolver());
         // Return constructed uri (this points to the newly inserted row of data)
         return returnUri;
     }

@@ -29,6 +29,9 @@ import java.util.List;
 
 public class Profile extends Fragment implements
         LoaderManager.LoaderCallbacks<Cursor>{
+
+    static LoaderManager loaderManager;
+    static LoaderManager.LoaderCallbacks P ;
     public Profile() {
         // Required empty public constructor
     }
@@ -50,6 +53,9 @@ public class Profile extends Fragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        loaderManager  = getLoaderManager();
+        P = Profile.this;
+        Log.e("qw","is"+getContext().getContentResolver());
         // Inflate the layout for this fragment
         Log.e("profile a7o","1");
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
@@ -69,6 +75,11 @@ public class Profile extends Fragment implements
         return v;
     }
 
+    public static void reCreateLoader()
+    {
+        Log.e("aya","muhamed");
+        loaderManager.restartLoader(TASK_LOADER_ID , null,P);
+    }
     public static Profile newInstance ()
     {
         Profile profile=new Profile();
@@ -130,6 +141,7 @@ public class Profile extends Fragment implements
     public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
 
         // Update the data that the adapter uses to create ViewHolders
+        Log.e("yarabbbb","is"+getContext().getContentResolver());
         mAdapter.swapCursor(data);
     }
 

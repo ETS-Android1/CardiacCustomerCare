@@ -60,6 +60,7 @@ public class Record extends Fragment implements Handler.Callback {
                 // Insert the content values via a ContentResolver
                 Log.e("mas","1");
                 Uri uri = getActivity().getApplicationContext().getContentResolver().insert(Contract.UserResults.CONTENT_URI, contentValues);
+                Profile.reCreateLoader();
             }
         });
         Handler handler = new Handler((Handler.Callback) this);
