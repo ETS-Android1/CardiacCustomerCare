@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cardiac Customer Care</string>
+    <string name="app_name">C3</string>
 
     //shared preferences
     <string name="login_preference">com.kfs.cardiaccustomercare_login_preference</string>

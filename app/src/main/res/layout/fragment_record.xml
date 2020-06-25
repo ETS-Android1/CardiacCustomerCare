@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+   <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragements.Record"
-    android:orientation="vertical">
-
-    <Button
-        android:id="@+id/startt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="start"/>
-
-    <Button
-        android:id="@+id/stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="stop"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        tools:targetApi="11">
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
         <Button
             android:gravity="center"
@@ -63,5 +43,3 @@
 
     </RelativeLayout>
 
-
-</LinearLayout>

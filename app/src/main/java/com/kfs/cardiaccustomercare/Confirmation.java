@@ -75,9 +75,9 @@ public class Confirmation extends AppCompatActivity {
     }
 
     private void InflatingViews() {
-        verificationContainer = (LinearLayout) findViewById(R.id.verificationContainer);
-        verifyET = (EditText) findViewById(R.id.verifyET);
-        errorTV = (TextView)findViewById(R.id.errorTV);
-        verify = (Button)findViewById(R.id.verifyBTN);
+      //  verificationContainer = (LinearLayout) findViewById(R.id.verificationContainer);...................................................................
+        verifyET = (EditText) findViewById(R.id.edit_text_email_verficition);
+     //   errorTV = (TextView)findViewById(R.id.errorTV);.................................................................................................
+        verify = (Button)findViewById(R.id.continue_verfivition);
     }
 }

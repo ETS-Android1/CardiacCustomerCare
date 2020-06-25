@@ -33,7 +33,7 @@ import java.util.Calendar;
 public class Record extends Fragment implements Handler.Callback {
 
 
-    Button start , stop ,logout;
+    Button logout;
     String path = Environment.getExternalStorageDirectory().getPath()+"/MyRecords.wav";
 
 
@@ -49,19 +49,7 @@ public class Record extends Fragment implements Handler.Callback {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_record, container, false);
         Log.e("recorddd","1");
-        start = v.findViewById(R.id.startt);
-        start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ContentValues contentValues = new ContentValues();
-                // Put the task description and selected mPriority into the ContentValues
-                contentValues.put(Contract.UserResults.COLUMN_result, "normall");
-                contentValues.put(Contract.UserResults.COLUMN_Date, "1/1/1/1");
-                // Insert the content values via a ContentResolver
-                Log.e("mas","1");
-                Uri uri = getActivity().getApplicationContext().getContentResolver().insert(Contract.UserResults.CONTENT_URI, contentValues);
-            }
-        });
+
         Handler handler = new Handler((Handler.Callback) this);
         final com.kfs.cardiaccustomercare.Record record = new com.kfs.cardiaccustomercare.Record(path,handler);
 
@@ -113,6 +101,13 @@ public class Record extends Fragment implements Handler.Callback {
         String dateTime = simpleDateFormat.format(calendar.getTime());
         DatabaseHelper dbHelper =new DatabaseHelper(getActivity());
         Log.e("n1","11111");
+        ContentValues contentValues = new ContentValues();
+        // Put the task description and selected mPriority into the ContentValues
+        contentValues.put(Contract.UserResults.COLUMN_result, "normall");
+        contentValues.put(Contract.UserResults.COLUMN_Date, dateTime);
+        // Insert the content values via a ContentResolver
+        Log.e("mas","1");
+        Uri uri = getActivity().getApplicationContext().getContentResolver().insert(Contract.UserResults.CONTENT_URI, contentValues);
 
     }
 
