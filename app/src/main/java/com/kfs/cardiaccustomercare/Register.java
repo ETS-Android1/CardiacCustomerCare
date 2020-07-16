@@ -61,15 +61,15 @@ public class Register extends AppCompatActivity {
 
 
     //facebook
-    LoginButton facebookLogin;
-    CallbackManager callbackManager;
+  //  LoginButton facebookLogin;
+   // CallbackManager callbackManager;
 
 
     //google
-    GoogleSignInClient mGoogleSignInClient;
+    /*GoogleSignInClient mGoogleSignInClient;
     SignInButton signInButton;
     GoogleSignInOptions gso;
-    private int RC_SIGN_IN =0;
+    private int RC_SIGN_IN =0; */
 
 
     //Toast that we will use to prevent repeating of instantiating
@@ -101,7 +101,7 @@ public class Register extends AppCompatActivity {
 
 
         //facebook
-        instantiatingFacebookObjects();
+       /* instantiatingFacebookObjects();
         facebookLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -117,7 +117,7 @@ public class Register extends AppCompatActivity {
             public void onError(FacebookException error) {
 
             }
-        });
+        }); */
 
 
 
@@ -125,33 +125,33 @@ public class Register extends AppCompatActivity {
 
 
         //google login
-        instantiatingGoogleObjects();
+      /*   instantiatingGoogleObjects(); ........................................................................................................................
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (v.getId()) {
+               switch (v.getId()) {
                     case R.id.sign_in_button:
                         signIn();
                         break;
                     // ...
                 }
             }
-        });
+        });*/ // .........................................................................................................................
 
     }
 
 
     //Infalting all Views in the screen
     private void inflatingViews() {
-        email = (EditText) findViewById(R.id.emailRegister);
-        pass = (EditText) findViewById(R.id.passwordRegister);
+        email = (EditText) findViewById(R.id.edit_text_email_register);
+        pass = (EditText) findViewById(R.id.edit_text_password);
         btn = (Button) findViewById(R.id.Register);
 
-        facebookLogin = (LoginButton)findViewById(R.id.login_button);
+       // facebookLogin = (LoginButton)findViewById(R.id.login_button);...........................................................................
 
-        signInButton = (SignInButton)findViewById(R.id.sign_in_button);
-        TextView textView = (TextView) signInButton.getChildAt(0);
-        textView.setText("Continue with Google");
+       // signInButton = (SignInButton)findViewById(R.id.sign_in_button);........................................................................
+       // TextView textView = (TextView) signInButton.getChildAt(0);
+      //  textView.setText("Continue with Google");
     }
 
 
@@ -309,12 +309,12 @@ public class Register extends AppCompatActivity {
         if(requestCode == 64206)
         {
             Log.e("faceboooooooooook", requestCode+" , "+resultCode+" , "+ data);
-            callbackManager.onActivityResult(requestCode, resultCode, data);
+           // callbackManager.onActivityResult(requestCode, resultCode, data);
         }else if (requestCode == 0)
         {
             Log.e("gooooooooogle",requestCode+" , "+resultCode+" , "+ data);
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
+         //   handleSignInResult(task);
         }
     }
 
@@ -323,7 +323,7 @@ public class Register extends AppCompatActivity {
 
 
     // Google Login related methods
-    private void instantiatingGoogleObjects()
+  /* private void instantiatingGoogleObjects()
     {
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -352,7 +352,7 @@ public class Register extends AppCompatActivity {
             Log.w("ggg", "signInResult:failed code=" + e.getStatusCode());
 
         }
-    }
+    } */
 
 
 
@@ -375,7 +375,7 @@ public class Register extends AppCompatActivity {
 
 
     //Facebook Login related methods
-    private void instantiatingFacebookObjects()
+  /*  private void instantiatingFacebookObjects()
     {
         callbackManager = CallbackManager.Factory.create();
         facebookLogin.setReadPermissions(Arrays.asList("email"));
@@ -417,7 +417,7 @@ public class Register extends AppCompatActivity {
         parameters.putString("fields", "email");
         request.setParameters(parameters);
         request.executeAsync();
-    }
+    } */
 }
 
 

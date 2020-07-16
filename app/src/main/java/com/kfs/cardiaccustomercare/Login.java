@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,6 +57,8 @@ public class Login extends AppCompatActivity {
 
     //login button for send the data to server for checking
     Button login;
+    //login with facbock or google
+    ImageView facbock_Login ,google_login ;
 
     //two strings which will carry the values  which the user typed
     String email,password;
@@ -129,12 +132,28 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        facbock_Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                facebookLogin.performClick();
+
+
+            }
+        });
+
+        google_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signInButton.performClick();
+
+            }
+        });
 
 
         //Login with Facebook
 
-        callbackManager = CallbackManager.Factory.create();
-        facebookLogin.setReadPermissions(Arrays.asList("email"));
+        callbackManager = CallbackManager.Factory.create() ;
+      facebookLogin.setReadPermissions(Arrays.asList("email"));
         facebookLogin.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -160,7 +179,7 @@ public class Login extends AppCompatActivity {
 
 
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+      GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
 
@@ -173,7 +192,7 @@ public class Login extends AppCompatActivity {
                     case R.id.sign_in_button:
                         signIn();
                         break;
-                    // ...
+
                 }
             }
         });
@@ -312,17 +331,18 @@ public class Login extends AppCompatActivity {
 
     //This method for inflating view
     private void inflatingViews() {
+        facbock_Login=findViewById(R.id.login_facbock);
+        google_login=findViewById(R.id.login_google);
+        emailET = (EditText) findViewById(R.id.edit_text_email);
+        passwordET =(EditText) findViewById(R.id.edit_text_password);
+        login =(Button) findViewById(R.id.button_login);
+        creteOne = (TextView)findViewById(R.id.register);
+        forgetPassword = (TextView)findViewById(R.id.forget_password);
+       // facebookLogin = (LoginButton)findViewById(R.id.login_button);............................................................
 
-        emailET = (EditText) findViewById(R.id.Email);
-        passwordET =(EditText) findViewById(R.id.Password);
-        login =(Button) findViewById(R.id.Login);
-        creteOne = (TextView)findViewById(R.id.createOne);
-        forgetPassword = (TextView)findViewById(R.id.forgetPassword);
-        facebookLogin = (LoginButton)findViewById(R.id.login_button);
-
-        signInButton = (SignInButton)findViewById(R.id.sign_in_button);
-        TextView textView = (TextView) signInButton.getChildAt(0);
-        textView.setText("Continue with Google");
+       // signInButton = (SignInButton)findViewById(R.id.sign_in_button);..................................................................
+//        TextView textView = (TextView) signInButton.getChildAt(0);..............................................................................
+       //textView.setText("Continue with Google");.......................................................................................................
     }
 
     //Go to Register Activity
