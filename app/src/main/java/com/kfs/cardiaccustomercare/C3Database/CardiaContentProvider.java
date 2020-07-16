@@ -87,7 +87,7 @@ public class CardiaContentProvider extends ContentProvider {
                         selectionArgs,
                         null,
                         null,
-                        sortOrder);
+                        Contract.UserResults._ID+" Desc");
                 break;
             // Default exception
             default:

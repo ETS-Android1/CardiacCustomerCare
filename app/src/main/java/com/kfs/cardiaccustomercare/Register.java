@@ -145,7 +145,7 @@ public class Register extends AppCompatActivity {
     private void inflatingViews() {
         email = (EditText) findViewById(R.id.edit_text_email_register);
         pass = (EditText) findViewById(R.id.edit_text_password);
-        btn = (Button) findViewById(R.id.Register);
+        btn = (Button) findViewById(R.id.register_button);
 
        // facebookLogin = (LoginButton)findViewById(R.id.login_button);...........................................................................
 

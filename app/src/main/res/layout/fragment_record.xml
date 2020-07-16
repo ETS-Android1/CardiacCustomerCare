@@ -1,45 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <RelativeLayout android:layout_width="match_parent"
+
+   <RelativeLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff">
 
-        <Button
-            android:gravity="center"
-            android:id="@+id/custom_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_default"
-            android:text="Start"
-            android:visibility="visible"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
-        <ProgressBar
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:id="@+id/prgress_par"
-            android:visibility="invisible"
-            android:indeterminateDrawable="@drawable/progress_color"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:background="@drawable/button_pressed" />
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:text="Start"
-            android:src="@drawable/heartrecord"
-            android:visibility="invisible"
-            android:id="@+id/image_view_health"/>
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_centerVertical="true"
+      android:id="@+id/startRL"
+      >
 
-        <TextView
-            android:id="@+id/text_view_coubter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/prgress_par"
-            android:layout_marginTop="78dp"
-            android:paddingLeft="40dp"
-            android:text="00:00:01"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            android:visibility="invisible" />
+   <Button
+       android:gravity="center"
+       android:id="@+id/custom_button"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@drawable/button_default_blue"
+       android:text="Start"
+       android:visibility="visible"
+       android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+   <ImageView
+       android:layout_width="200dp"
+       android:layout_height="200dp"
+       android:text="Start"
+       android:src="@drawable/heartrecord"
+       android:visibility="invisible"
+       android:id="@+id/image_view_health"/>
+
+  </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/gifRL">
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/heatLineGif"
+        android:layout_marginTop="-70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/source"
+        />
+    <TextView
+        android:id="@+id/text_view_coubter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heatLineGif"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-150dp"
+        android:layout_marginLeft="100dp"
+        android:paddingLeft="40dp"
+        android:text="00:00:01"
+        android:textColor="#13bbd2"
+        android:textSize="35sp"
+        android:textStyle="bold"
+     />
+    </RelativeLayout>
+
+
+
+
+
 
     </RelativeLayout>
 

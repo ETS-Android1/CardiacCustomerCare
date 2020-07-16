@@ -75,9 +75,10 @@ public class Profile extends Fragment implements
         return v;
     }
 
+
     public static void reCreateLoader()
     {
-        Log.e("aya","muhamed");
+        Log.e("fwfwww","fwfw");
         loaderManager.restartLoader(TASK_LOADER_ID , null,P);
     }
     public static Profile newInstance ()
